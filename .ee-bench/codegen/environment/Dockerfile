@@ -14,8 +14,8 @@ RUN apt-get update && \
 
 WORKDIR {{ instance.project_root }}
 RUN git init && \
-    git remote add origin https://github.com/{{ instance.owner }}/{{ instance.repo_name }}.git && \
-    git fetch origin --depth 1 {{ instance.base_commit }} && \
+    git remote add origin https://github.com/dpaia/dg-eval-prj.git && \
+    git fetch origin --depth 1 bf72557 && \
     git reset --hard FETCH_HEAD
 
 # Make gradlew executable and pre-fetch dependencies
